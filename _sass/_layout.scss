@@ -1,0 +1,90 @@
+body{
+	background-color: darken($primary-dark, 10%);
+	overflow-x: hidden;
+}
+
+.static {
+	border-top: 1px solid $primary-dark;
+}
+
+.main {
+	background-color: $white;
+	// border: .6rem solid $primary-dark;
+	border-radius: .6rem;
+	max-width: 960px;
+	margin: 2.4rem auto;
+	padding: 1.2rem;
+}
+
+header{
+
+	h1{
+		line-height: 0;
+		font-size: 0;
+		text-align: center;
+	}
+
+	.site-title {
+		display: inline-block;
+	}
+
+	.logo {
+		max-width: 500px;
+	}
+
+	nav{
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		display: inline-block;
+
+		a{
+			padding: 0 1.2rem;
+			display: inline-block;
+		}
+
+
+	}
+
+	a:link{
+		color: $white;
+		text-decoration: none;
+	}
+
+	a:visited{
+		color: $white;
+	}
+
+	a:hover,
+	a:focus{
+		color: $gray5;
+	}
+
+	a:active{
+		color: $white;
+	}
+}
+
+.site-sub-nav{
+	background-color: $gray6;
+	border-bottom: 1px solid $gray5;
+	padding: 1.2rem;
+	font-size: $font-size--small;
+	margin-bottom: -1px;
+
+	a{
+		display: inline-block;
+		padding: 0 8px;
+	}
+}
+
+.section {
+	margin: 3.6rem 0;
+
+	&.--who {
+		margin-top: 0;
+	}
+
+	&.--contact {
+		margin-bottom: 1.2rem;
+	}
+}

@@ -1,0 +1,14 @@
+# Site settings
+title: Greenfoot
+email: shoedo@example.com
+description: >
+  Greenfoot Waste is recreational waste management
+baseurl: ""
+url: "https://greenfootwaste.com"
+tagline: Recreactional Waste Management
+
+# Build settings
+markdown: kramdown
+
+sass:
+  style: compressed

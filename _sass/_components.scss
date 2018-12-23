@@ -1,0 +1,12 @@
+.btn{
+	background-color: $primary-dark;
+
+	&:focus,
+	&:hover {
+		background-color: darken($primary-dark, 5%);
+	}
+
+	&:active{
+		background-color: $primary-dark;
+	}
+}
