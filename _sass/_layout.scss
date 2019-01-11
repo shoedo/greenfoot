@@ -35,7 +35,11 @@ header{
 	}
 
 	.logo {
-		width: 500px;
+		width: 300px;
+
+		@media (min-width: 600px) {
+			width: 500px;
+		}
 	}
 
 	nav{
@@ -70,6 +74,10 @@ header{
 	}
 }
 
+footer {
+	margin: 1.2rem 2rem;
+}
+
 .site-sub-nav{
 	background-color: $gray6;
 	border-bottom: 1px solid $gray5;
@@ -92,5 +100,41 @@ header{
 
 	&.--contact {
 		margin-bottom: 1.2rem;
+	}
+}
+
+.section.--services {
+	h3{
+		position: relative;
+
+		@media (min-width: 600px) {
+			margin-left: 32px;
+		}
+	}
+
+	h3::before {
+		background-color: $primary-dark;
+		border-radius: 20px;
+		content: '';
+		height: 12px;
+		left: -24px;
+		position: absolute;
+		top: 50%;
+		margin-top: -8px;
+		opacity: .5;
+		width: 12px;
+
+		@media (min-width: 600px) {
+			left: -30px;
+			margin-top: -12px;
+			height: 16px;
+			width: 16px;
+		}
+	}
+
+	p {
+		@media (min-width: 600px) {
+			margin-left: 32px;
+		}
 	}
 }
