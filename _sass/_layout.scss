@@ -114,21 +114,24 @@ footer {
 
 	h3::before {
 		background-color: $primary-dark;
-		border-radius: 20px;
+		border-radius: 3.2rem;
 		content: '';
-		height: 12px;
-		left: -24px;
+		height: 1.2rem;
+		left: -2.4rem;
 		position: absolute;
 		top: 50%;
-		margin-top: -10px;
+		margin-top: -.8rem;
 		opacity: .5;
-		width: 12px;
+		width: 1.2rem;
 
 		@media (min-width: 600px) {
-			left: -30px;
-			margin-top: -12px;
-			height: 16px;
-			width: 16px;
+			left: -3.2rem;
+		}
+
+		@media (min-width: 960px) {
+			margin-top: -1.1rem;
+			height: 1.6rem;
+			width: 1.6rem;
 		}
 	}
 
