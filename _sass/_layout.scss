@@ -1,5 +1,4 @@
 body{
-	background-color: darken($primary-dark, 10%);
 	overflow-x: hidden;
 
 	@media (min-width: 600px) {
@@ -27,7 +26,6 @@ header{
 	h1{
 		line-height: 0;
 		font-size: 0;
-		text-align: center;
 	}
 
 	.site-title {
@@ -36,10 +34,6 @@ header{
 
 	.logo {
 		width: 300px;
-
-		@media (min-width: 600px) {
-			width: 500px;
-		}
 	}
 
 	nav{
@@ -52,25 +46,53 @@ header{
 			display: inline-block;
 		}
 
-
+		a:link{
+			border-bottom: 2px transparent solid;
+			color: $gray2;
+			text-decoration: none;
+		}
+	
+		a:visited{
+			color: $gray2;
+		}
+	
+		a.active,
+		a:hover,
+		a:focus{
+			border-bottom-color: $primary-dark;
+			color: $gray3;
+		}
+	
+		a:active{
+			color: $gray2;
+		}
 	}
+}
 
-	a:link{
-		color: $white;
-		text-decoration: none;
+.hero{
+	height: 24rem;
+	background: url('/img/hero/cliffs_max.jpg') no-repeat center bottom;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 1;
+	box-shadow: 0 -1px 1px 0 rgba(0,0,0,.25) inset;
+	align-items: center;
+	text-align: center;
+  
+	&:after{
+	  position: absolute;
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  z-index: 1;
+	  background-color: rgba(255,255,255,.75);
+	  content: '';
 	}
-
-	a:visited{
-		color: $white;
-	}
-
-	a:hover,
-	a:focus{
-		color: $gray5;
-	}
-
-	a:active{
-		color: $white;
+  
+	*{
+	  position: relative;
+	  z-index: 2;
 	}
 }
 

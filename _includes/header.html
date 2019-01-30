@@ -1,18 +1,18 @@
 <header class="site-header">
   <h1>
     <a class="site-title" href="{{ site.baseurl }}/">
-      <img src="img/logo_cropped_full.png" alt="Logo" class="logo" />
+      <img src="/img/logo_cropped_full.png" alt="Logo" class="logo" />
       {{ site.title }} {{ site.tagline }}
     </a>
   </h1>
   <nav class="site-nav">
     {% assign pages = site.pages | sort: "weight" %}
-    {% for node in pFages %}
+    {% for node in pages %}
       {% if node.title and node.weight != 0 %}
         {% assign node_url_parts = node.url | split: '/' %}
         {% assign node_url_parts_size = node_url_parts | size %}
         {% if node_url_parts_size == 2 %}
-          <a href='{{node.url}}'>{{node.title}}</a>
+          <a href='{{node.url}}' class='{{node.nav-class}}'>{{node.title}}</a>
         {% endif %}
       {% endif %}
     {% endfor %}
