@@ -12,7 +12,11 @@
         {% assign node_url_parts = node.url | split: '/' %}
         {% assign node_url_parts_size = node_url_parts | size %}
         {% if node_url_parts_size == 2 %}
-          <a href='{{node.url}}' class='{{node.nav-class}}'>{{node.title}}</a>
+          {% if page.url == node.url %}
+            <a href='{{node.url}}' class='active {{node.nav-class}}'>{{node.title}}</a>
+          {% else %}
+            <a href='{{node.url}}' class='{{node.nav-class}}'>{{node.title}}</a>
+          {% endif %}
         {% endif %}
       {% endif %}
     {% endfor %}
