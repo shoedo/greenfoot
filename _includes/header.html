@@ -6,13 +6,18 @@
     </a>
   </h1>
 
-  <div class="site-nav-toggle">
+  <div class="site-nav-toggle site-nav-icon">
     <a href="javascript:;">
       <i class="fas fa-bars"></i>
     </a>
   </div>
 
   <nav class="site-nav">
+    <div class="site-nav-close site-nav-icon">
+      <a href="javascript:;">
+        <i class="fas fa-times"></i>
+      </a>
+    </div>
     <h4>MENU</h4>
     {% assign pages = site.pages | sort: "weight" %}
     {% for node in pages %}

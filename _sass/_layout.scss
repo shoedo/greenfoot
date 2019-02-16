@@ -157,19 +157,10 @@ header{
 		right: 0;
 	}
 }
-
-.site-nav-toggle {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	right: 2.4rem;
+.site-nav-icon {
 	display: flex;
 	align-items: center;
 	font-size: 3.6rem;
-
-	@media (min-width: 960px) {
-		display: none;
-	}
 
 	a:link{
 		color: $primary-dark;
@@ -186,6 +177,29 @@ header{
 
 	a:active{
 		color: darken($primary-dark, 5%);
+	}
+}
+
+.site-nav-toggle {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 2.4rem;
+
+	@media (min-width: 960px) {
+		display: none;
+	}
+}
+
+.site-nav-close {
+	position: absolute;
+	top: .6rem;
+	right: .6rem;
+
+	a{
+		display: block;
+		padding: 0 .6rem !important;
+		font-size: 2.4rem !important;
 	}
 }
 
