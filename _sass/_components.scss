@@ -10,3 +10,32 @@
 		background-color: $primary-dark;
 	}
 }
+
+.framed-photo {
+	max-width: 100%;
+	width: 500px;
+	border: 1px solid $gray4;
+	padding: .6rem;
+	margin: 0 auto;
+}
+
+.framed-iframe {
+	box-sizing: border-box;
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	width: 100%;
+	min-height: 100vh;
+
+	&.-contact {
+		min-height: 950px;
+	}
+
+	&.-quote {
+		min-height: 1355px;
+	}
+}
+
+.freebirdFormviewerViewFormContentWrapper {
+	display: none !important;
+}
