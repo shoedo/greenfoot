@@ -5,7 +5,15 @@
       {{ site.title }} {{ site.tagline }}
     </a>
   </h1>
+
+  <div class="site-nav-toggle">
+    <a href="javascript:;">
+      <i class="fas fa-bars"></i>
+    </a>
+  </div>
+
   <nav class="site-nav">
+    <h4>MENU</h4>
     {% assign pages = site.pages | sort: "weight" %}
     {% for node in pages %}
       {% if node.title and node.weight != 0 %}
@@ -13,9 +21,13 @@
         {% assign node_url_parts_size = node_url_parts | size %}
         {% if node_url_parts_size == 2 %}
           {% if page.url == node.url %}
-            <a href='{{node.url}}' class='active {{node.nav-class}}'>{{node.title}}</a>
+            <div class="nav-item-wrapper">
+              <a href='{{node.url}}' class='nav-item active {{node.nav-class}}'>{{node.title}}</a>
+            </div>
           {% else %}
-            <a href='{{node.url}}' class='{{node.nav-class}}'>{{node.title}}</a>
+            <div class="nav-item-wrapper">
+              <a href='{{node.url}}' class='nav-item {{node.nav-class}}'>{{node.title}}</a>
+            </div>
           {% endif %}
         {% endif %}
       {% endif %}
